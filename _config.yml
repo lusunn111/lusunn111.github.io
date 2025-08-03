@@ -7,7 +7,7 @@
 # 基本网站设置
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "ZhihaoMao's Academic Page" # 网站标题，例如 "我的学术主页"
+title                    : "Homepage" # 网站标题，例如 "我的学术主页"
 title_separator          : "-"
 name                     : &name "Zhihao Mao"
 description              : &description "深自缄默 如云漂泊"
