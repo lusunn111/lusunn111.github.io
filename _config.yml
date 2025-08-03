@@ -154,7 +154,7 @@ analytics:
     tracking_id          :
 
 
-# Reading Files
+# 读取文件
 include:
   - .htaccess
   - _pages
@@ -193,7 +193,7 @@ encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
-# Conversion
+# 转换
 markdown: kramdown
 highlighter: rouge
 lsi: false
@@ -201,7 +201,7 @@ excerpt_separator: "\n\n"
 incremental: false
 
 
-# Markdown Processing
+# Markdown 处理
 kramdown:
   input: GFM
   hard_wrap: false
@@ -213,7 +213,7 @@ kramdown:
   enable_coderay: false
 
 
-# These settings control the types of collections used by the template
+# 这些设置控制模板使用的集合类型
 collections:
   teaching:
     output: true
@@ -229,7 +229,7 @@ collections:
     permalink: /:collection/:path/
 
 
-# These settings control how pages and collections are included in the site
+# 这些设置控制页面和集合如何包含在网站中
 defaults:
   # _posts
   - scope:
@@ -292,14 +292,14 @@ sass:
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
-# Outputting
+# 输出
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
+# paginate: 5 # 显示的文章数量
 # paginate_path: /page:num/
 timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-# Plugins
+# 插件
 plugins:
   - jekyll-feed
   - jekyll-gist
@@ -308,7 +308,7 @@ plugins:
   - jekyll-redirect-from
   - jemoji
 
-# Mimic GitHub Pages with --safe
+# 使用 --safe 模仿 GitHub Pages
 whitelist:
   - jekyll-feed
   - jekyll-gist
@@ -318,13 +318,12 @@ whitelist:
   - jemoji
 
 
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
+# 归档
+#  类型
+#  - 使用 Liquid 构建的 GitHub Pages 兼容归档页面 ~> type: liquid (默认)
+#  - Jekyll Archives 插件归档页面 ~> type: jekyll-archives
+#  路径（示例）
+#  - 使用 Liquid 方法时归档页面应存在于路径中，否则您可能会遇到损坏的链接（特别是启用面包屑时）
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
@@ -347,7 +346,7 @@ tag_archive:
 #     tag: /tags/:name/
 
 
-# HTML Compression
+# HTML 压缩
 # - http://jch.penibelst.de/
 compress_html:
   clippings: all
