@@ -25,7 +25,7 @@ author:
   pronouns         : "he/him"
   bio              : "深自缄默 如云漂泊"
   location         : "Wuhan, China"
-  employer         : "China University of Geosciences, Wuhan"
+  employer         : "China University of Geosciences,<br/>Wuhan"
   uri              : # URL
   email            : "20231001111@cug.edu.cn" # 邮箱地址 - 请更新为您的邮箱地址
 
@@ -294,8 +294,8 @@ sass:
 
 # 输出
 permalink: /:categories/:title/
-# paginate: 5 # 显示的文章数量
-# paginate_path: /page:num/
+paginate: 10 # 显示的文章数量
+paginate_path: /page:num/
 timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
