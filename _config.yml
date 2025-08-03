@@ -1,27 +1,25 @@
-# Welcome to Jekyll!
+# 欢迎使用 Jekyll！
 #
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
-# server process.
+# 此配置文件用于影响整个网站的设置，这些设置通常只需设置一次，很少需要修改。
+# 出于技术原因，当您使用 `jekyll serve -l -H localhost` 时，此文件不会自动重新加载。
+# 如果更改此文件，请重新启动服务器进程。
 
-# Basic Site Settings
+# 基本网站设置
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "ZhihaoMao's Academic Page" # The title of your site, e.g. "My Academic Page"
+title                    : "ZhihaoMao's Academic Page" # 网站标题，例如 "我的学术主页"
 title_separator          : "-"
 name                     : &name "Zhihao Mao"
 description              : &description "深自缄默 如云漂泊"
-url                      : https://lusunn111.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+url                      : https://lusunn111.github.io # 网站的基础主机名和协议，例如 "https://[你的GitHub用户名].github.io" 或如果你已经在Github上托管了其他页面，则使用 "https://[你的GitHub用户名].github.io/[你的仓库名]"
+baseurl                  : "" # 网站的子路径，例如 "/blog"
 repository               : "lusunn111/lusunn111.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
+# 网站作者 - 以下设置控制侧边栏作者内容部分显示的内容。
+#           如果字段为空，图标和链接将不会显示，否则会显示出来。
+#           可通过编辑 /_includes/author-profile.html 进行其他自定义。
 author:
-  # Biographic information
+  # 个人信息
   avatar           : "profile.png"
   name             : "Zhihao Mao"
   pronouns         : "he/him"
@@ -29,11 +27,11 @@ author:
   location         : "Wuhan, China"
   employer         : "China University of Geosciences, Wuhan"
   uri              : # URL
-  email            : "20231001111@cug.edu.cn" # Email address - Update with your email address
+  email            : "20231001111@cug.edu.cn" # 邮箱地址 - 请更新为您的邮箱地址
 
-  # Academic websites
+  # 学术网站
   academia         : # URL
-  arxiv            : # URL - Update with the correct link to your profile
+  arxiv            : # URL - 请更新为您档案的正确链接
   googlescholar    : #"https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
@@ -43,42 +41,42 @@ author:
   researchgate     : # URL
   scopus           : # URL
 
-  # Repositories and software development
-  bitbucket        : # Username - Update with your username on the site
-  codepen          : # Username
-  dribbble         : # Username
+  # 代码仓库和软件开发
+  bitbucket        : # 用户名 - 请更新为您在该网站上的用户名
+  codepen          : # 用户名
+  dribbble         : # 用户名
   github           : "lusunn111"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+  kaggle           : # 用户名  
+  stackoverflow    : # 用户编号或用户编号和姓名（即使用"1"或"1/jeff-atwood"）    
 
-  # Social media
-  artstation       : # Username
-  bluesky          : #"bsky.app" # Replace this with you Bluesky username
-  facebook         : # Username
-  flickr           : # Username
-  foursquare       : # Username
-  goodreads        : # Username
-  google_plus      : # Username
-  keybase          : # Username
-  instagram        : # Username
-  lastfm           : # Username
-  linkedin         : # Username
+  # 社交媒体
+  artstation       : # 用户名
+  bluesky          : #"bsky.app" # 请替换为您的 Bluesky 用户名
+  facebook         : # 用户名
+  flickr           : # 用户名
+  foursquare       : # 用户名
+  goodreads        : # 用户名
+  google_plus      : # 用户名
+  keybase          : # 用户名
+  instagram        : # 用户名
+  lastfm           : # 用户名
+  linkedin         : # 用户名
   mastodon         : # URL
   medium           : # URL
-  pinterest        : # Username
-  soundcloud       : # Username
-  steam            : # Username
+  pinterest        : # 用户名
+  soundcloud       : # 用户名
+  steam            : # 用户名
   telegram         : # URL
-  tumblr           : # Username
-  twitter          : # Username for X / Twitter
-  vine             : # Username
-  weibo            : # Username
-  wikipedia        : # Username
-  xing             : # Username
-  youtube          : # Username
-  zhihu            : lusunn111 # Username
+  tumblr           : # 用户名
+  twitter          : # X / Twitter 用户名
+  vine             : # 用户名
+  weibo            : # 用户名
+  wikipedia        : # 用户名
+  xing             : # 用户名
+  youtube          : # 用户名
+  zhihu            : lusunn111 # 用户名
 
-# Publication Category - The following the list of publication categories and their headings
+# 发表物分类 - 以下是发表物分类及其标题的列表
 publication_category:
   books:
     title: 'Books'
@@ -87,15 +85,15 @@ publication_category:
   conferences:
     title: 'Conference Papers'
 
-# Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
+# 网站设置
+teaser                   :  # 放置在 /images/ 中的预告片备用预告片图像的文件名，例如 "500x300.png"
+breadcrumbs              : false # true, false (默认)
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
+read_more                : "disabled" # 如果启用，将向摘录添加"阅读更多"链接
+talkmap_link             : false      # 更改为 true 以在演讲页面上添加 talkmap 链接
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : # false (默认), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
     shortname            :
   discourse:
