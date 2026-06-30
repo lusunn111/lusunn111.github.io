@@ -4,6 +4,6 @@ push.sh
 .bundle/
 .jekyll-cache/
 .sass-cache/
-vendor/
+/vendor/
 node_modules/
 *.log
