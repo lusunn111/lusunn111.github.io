@@ -313,36 +313,6 @@
           <p class="academic-placeholder">{{ patents.note }}</p>
         </section>
 
-        <section id="software" class="academic-section">
-          <h2><i class="fa-solid fa-code" aria-hidden="true"></i><span>Software</span></h2>
-          <div class="academic-software-list">
-            {% for item in academic.software %}
-              <article class="academic-software-item">
-                <div>
-                  <p class="academic-software-name">
-                    <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
-                  </p>
-                  <p class="academic-secondary">{{ item.description }}</p>
-                </div>
-                <a
-                  class="academic-star-badge"
-                  href="https://github.com/{{ item.repository }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub stars for {{ item.repository }}"
-                >
-                  <img
-                    src="https://img.shields.io/github/stars/{{ item.repository }}?style=social"
-                    alt="GitHub stars"
-                    height="20"
-                    loading="lazy"
-                  >
-                </a>
-              </article>
-            {% endfor %}
-          </div>
-        </section>
-
         <section id="open-source" class="academic-section">
           <h2><i class="fa-brands fa-github" aria-hidden="true"></i><span>Open Source</span></h2>
           <div class="academic-open-source-list">
@@ -393,10 +363,23 @@
           </div>
         </section>
 
-        {% assign music = academic.placeholder_sections | where: 'id', 'favorite-music' | first %}
-        <section id="{{ music.id }}" class="academic-section academic-empty-section">
-          <h2><i class="{{ music.icon }}" aria-hidden="true"></i><span>{{ music.label }}</span></h2>
-          <p class="academic-placeholder">{{ music.note }}</p>
+        <section id="favorite-music" class="academic-section">
+          <h2><i class="fa-solid fa-music" aria-hidden="true"></i><span>My Favorite Music</span></h2>
+          <ul class="academic-music-list" aria-label="Zhihao Mao's favorite music">
+            {% for track in academic.favorite_music %}
+              <li class="academic-music-item">
+                <span class="academic-music-mark" aria-hidden="true">♪</span>
+                <div class="academic-music-copy">
+                  <p class="academic-music-title">
+                    <a href="{{ track.url }}" target="_blank" rel="noopener noreferrer">{{ track.title }}</a>
+                  </p>
+                  <p class="academic-music-meta">
+                    {{ track.artist }}{% if track.note %}<span> · {{ track.note }}</span>{% endif %}
+                  </p>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
         </section>
 
         {% if content != empty %}
