@@ -327,34 +327,83 @@ favorite_music:
   - title: 知我
     artist: 国风堂 · 哦漏
     note: 《剑来》动画片尾曲
+    album: 知我
+    year: "2019"
+    cover: /assets/img/music/zhi-wo.png
+    source: Shazam
     url: https://www.shazam.com/zh-tw/song/1823139476/e79fa5e68891-e58aa8e794bbe58991e69da5e78987e5b0bee69bb2/music-video
   - title: 大鱼
     artist: 周深
+    album: 深的深
+    year: "2017"
+    cover: /assets/img/music/da-yu.jpg
+    source: Apple Music
+    preview_url: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/3e/3a/d9/3e3ad9e1-d8e9-6136-e96e-e5aad49d580a/mzaf_9994262041339333970.plus.aac.p.m4a
     url: https://music.apple.com/cn/song/1320755350
   - title: 起风了
     artist: 周深
+    album: 起风了
+    year: "2020"
+    cover: /assets/img/music/qi-feng-le.jpg
+    source: Apple Music
+    preview_url: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/4b/fd/5e4bfd09-f07c-7a48-1749-823a23664d13/mzaf_4556715534531226383.plus.aac.p.m4a
     url: https://music.apple.com/cn/song/1857545617
   - title: 庙堂之外
     artist: 陈楚生
+    album: 《长安的荔枝》电影片尾曲
+    year: "2025"
+    cover: /assets/img/music/miao-tang-zhi-wai.jpg
+    source: Apple Music
+    preview_url: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/d4/6b/c3d46b61-aa71-6029-df01-16309d13ae0d/mzaf_7947650282553843384.plus.aac.p.m4a
     url: https://music.apple.com/cn/song/1826839497
   - title: 若是月亮还没来
     artist: 王宇宙Leto · 乔浚丞
     note: 正式发行名《若月亮没来》
-    url: https://www.youtube.com/watch?v=7gbw51prf5Y
+    album: 若月亮没来
+    year: "2024"
+    cover: /assets/img/music/ruo-yue-liang-mei-lai.jpg
+    source: Apple Music
+    preview_url: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a8/d2/b0/a8d2b0e0-e83b-f937-b223-276c9cc0c8de/mzaf_13976199835903979767.plus.aac.p.m4a
+    url: https://music.apple.com/cn/album/%E8%8B%A5%E6%9C%88%E4%BA%AE%E6%B2%A1%E6%9D%A5-%E8%8B%A5%E6%98%AF%E6%9C%88%E4%BA%AE%E8%BF%98%E6%B2%A1%E6%9D%A5/6789436754?i=6789437202
   - title: 恋人心
     artist: 魏新雨
+    album: 恋人心
+    year: "2019"
+    cover: /assets/img/music/lian-ren-xin.jpg
+    source: Apple Music
+    preview_url: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/26/03/4d/26034d91-cb08-7af9-e87d-ff0b63e6124d/mzaf_7723155796133164377.plus.aac.p.m4a
     url: https://music.apple.com/cn/song/1500370652
   - title: 樱花草
     artist: Sweety
+    album: 花言乔语
+    year: "2006"
+    cover: /assets/img/music/ying-hua-cao.jpg
+    source: Apple Music
+    preview_url: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/de/37/72/de37721e-1be7-00a2-4f50-8f9c1a80be6b/mzaf_6417986775387806155.plus.aac.p.m4a
     url: https://music.apple.com/cn/song/1854817916
   - title: 平凡之路
     artist: 朴树
+    album: 猎户星座
+    year: "2017"
+    cover: /assets/img/music/ping-fan-zhi-lu.jpg
+    source: Apple Music
+    preview_url: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c5/19/3f/c5193f32-615a-db89-29ae-28b67035ecf5/mzaf_14264476800131433849.plus.aac.p.m4a
     url: https://music.apple.com/cn/song/1438422297
   - title: 光辉岁月
     artist: Beyond
-    url: https://music.apple.com/cn/song/1692902234
+    album: 命运派对
+    year: "1990"
+    cover: /assets/img/music/guang-hui-sui-yue.jpg
+    source: Apple Music
+    preview_url: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a9/2b/08/a92b080b-33a8-e4b8-3b7f-50c4a4fbfc91/mzaf_12921422472317735622.plus.aac.p.m4a
+    url: https://music.apple.com/cn/album/%E5%85%89%E8%BE%89%E5%B2%81%E6%9C%88/1443905184?i=1443905206
   - title: 水手
     artist: 郑智化
+    album: 私房歌
+    year: "1992"
+    cover: /assets/img/music/shui-shou.jpg
+    source: Apple Music
+    preview_url: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/51/57/0e/51570e80-fdae-49dc-a0a2-cffd6f5eda2c/mzaf_9268925998885406124.plus.aac.p.m4a
     url: https://music.apple.com/cn/song/1154530076
 
 open_source:

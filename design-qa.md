@@ -58,12 +58,13 @@ The publications comparison checks the most detailed region at the same mobile s
 - Dynamic citation link: KERV resolves to `Citations: 10` and links to its Google Scholar detail entry.
 - Browser console: no errors during the final local check.
 - Publication asset runtime check: 8 of 8 images completed with non-zero natural dimensions.
-- Responsive check: at a 390 × 844 viewport, the document client width is 375 px and scroll width is 375 px; all nine Open Source rows and the ten-song Favorite Music list wrap without horizontal overflow.
+- Favorite Music interaction: 10 local cover images render at 600 × 600; 9 tracks expose official Apple Music 30-second previews, and the custom player supports card selection, play/pause, previous/next, progress, volume, sequential, shuffle, and repeat-one modes. The first playback test advanced normally with a 30-second duration and no console error.
+- Responsive check: at a 390 × 844 viewport, the document client width and scroll width are both 390 px; all nine Open Source rows, the player controls, and the ten Diao-inspired Favorite Music cards wrap without horizontal overflow.
 - Jekyll production build: passed.
 
 ## Follow-up polish
 
 - P3: the visitor badge wraps to a second line at 390 px. This is acceptable and avoids shrinking the academic text or truncating a live metric.
-- P3: Patents remains an explicit placeholder until verified content is available. Favorite Music now contains ten user-selected, source-checked tracks with direct listening links. The former Software section was removed because the verified repositories belong under Open Source and there is currently no software-copyright record to list.
+- P3: Patents remains an explicit placeholder until verified content is available. Favorite Music contains ten user-selected, source-checked tracks with local cover art, official full-track links, and nine stable official preview sources. `知我` retains a full-track platform link because no stable official web preview file was found. The former Software section was removed because the verified repositories belong under Open Source and there is currently no software-copyright record to list.
 
 final result: passed

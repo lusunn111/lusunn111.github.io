@@ -95,8 +95,11 @@
               <strong>{{ academic.academic_services.label }}:</strong>
               {% for service in academic.academic_services.entries -%}
                 <a href="{{ service.url }}" target="_blank" rel="noopener noreferrer">{{ service.name }}</a>
-                {%- unless forloop.last %}<span aria-hidden="true">, </span>{% endunless -%}
-              {%- endfor %}.
+                {%- unless forloop.last -%}
+                  <span aria-hidden="true">, </span>
+                {%- endunless -%}
+              {%- endfor -%}
+              .
             </p>
           {% endif %}
           <div class="academic-live-badges" aria-label="Live academic and GitHub metrics">
@@ -107,6 +110,50 @@
             {% endfor %}
           </div>
         </section>
+
+        {% assign initial_track = academic.favorite_music[1] %}
+        <div class="academic-music-player" aria-label="Favorite music preview player">
+          <audio id="academic-music-audio" preload="metadata"></audio>
+          <div class="academic-music-player-controls">
+            <div class="academic-music-player-buttons" aria-label="Playback controls">
+              <button type="button" class="academic-player-button" data-music-action="previous" aria-label="Previous track">
+                <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="academic-player-button academic-player-primary" data-music-action="play" aria-label="Play preview">
+                <i class="fa-solid fa-play" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="academic-player-button" data-music-action="next" aria-label="Next track">
+                <i class="fa-solid fa-forward-step" aria-hidden="true"></i>
+              </button>
+              <button
+                type="button"
+                class="academic-player-button"
+                data-music-action="mode"
+                aria-label="Playback mode: sequential"
+                title="Playback mode: sequential"
+              >
+                <i class="fa-solid fa-repeat" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="academic-music-player-track">
+              <span class="academic-music-player-title">{{ initial_track.title }}</span>
+              <span class="academic-music-player-artist">{{ initial_track.artist }}</span>
+            </div>
+            <div class="academic-music-player-progress">
+              <span data-music-time="current">0:00</span>
+              <input type="range" min="0" max="100" step="0.1" value="0" data-music-progress aria-label="Preview progress">
+              <span data-music-time="duration">0:00</span>
+            </div>
+            <div class="academic-music-player-volume">
+              <button type="button" class="academic-player-volume-button" data-music-action="mute" aria-label="Mute preview">
+                <i class="fa-solid fa-volume-low" aria-hidden="true"></i>
+              </button>
+              <input type="range" min="0" max="100" step="1" value="20" data-music-volume aria-label="Preview volume">
+              <span data-music-volume-value>20%</span>
+            </div>
+          </div>
+          <p class="academic-music-player-source">Official previews · full tracks open on the linked music platform</p>
+        </div>
 
         <section id="education" class="academic-section">
           <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span>Education</span></h2>
@@ -139,7 +186,9 @@
                       {% endif %}
                     </p>
                   {% endif %}
-                  {% if item.detail %}<p>{{ item.detail }}</p>{% endif %}
+                  {% if item.detail %}
+                    <p>{{ item.detail }}</p>
+                  {% endif %}
                 </div>
               </article>
             {% endfor %}
@@ -176,7 +225,9 @@
                     {% endif %}
                   </p>
                 {% endif %}
-                {% if item.description %}<p class="academic-secondary">{{ item.description }}</p>{% endif %}
+                {% if item.description %}
+                  <p class="academic-secondary">{{ item.description }}</p>
+                {% endif %}
               </article>
             {% endfor %}
           </div>
@@ -203,7 +254,9 @@
             {% for item in academic.honors %}
               <article class="academic-record-item">
                 <p class="academic-record-date">{{ item.date }}</p>
-                <div class="academic-record-copy"><p>{{ item.title }}</p></div>
+                <div class="academic-record-copy">
+                  <p>{{ item.title }}</p>
+                </div>
               </article>
             {% endfor %}
           </div>
@@ -264,7 +317,11 @@
                       </p>
                       <p class="academic-publication-authors">
                         {% for author in item.authors -%}
-                          {%- if author.self -%}<strong>{{ author.name }}</strong>{%- else -%}{{ author.name }}{%- endif -%}
+                          {%- if author.self -%}
+                            <strong>{{ author.name }}</strong>
+                          {%- else -%}
+                            {{ author.name }}
+                          {%- endif -%}
                           {%- unless forloop.last -%}, {% endunless -%}
                         {%- endfor %}
                       </p>
@@ -278,7 +335,8 @@
                           target="_blank"
                           rel="noopener noreferrer"
                           data-scholar-title="{{ item.title }}"
-                        >Citations</a>]
+                          >Citations</a
+                        >]
                         {% if item.star_repository %}
                           <a
                             class="academic-star-badge"
@@ -309,7 +367,9 @@
 
         {% assign patents = academic.placeholder_sections | where: 'id', 'patents' | first %}
         <section id="{{ patents.id }}" class="academic-section academic-empty-section">
-          <h2><i class="{{ patents.icon }}" aria-hidden="true"></i><span>{{ patents.label }}</span></h2>
+          <h2>
+            <i class="{{ patents.icon }}" aria-hidden="true"></i><span>{{ patents.label }}</span>
+          </h2>
           <p class="academic-placeholder">{{ patents.note }}</p>
         </section>
 
@@ -357,7 +417,9 @@
             {% for item in academic.competitions %}
               <article class="academic-record-item">
                 <p class="academic-record-date">{{ item.date }}</p>
-                <div class="academic-record-copy"><p>{{ item.title }}</p></div>
+                <div class="academic-record-copy">
+                  <p>{{ item.title }}</p>
+                </div>
               </article>
             {% endfor %}
           </div>
@@ -365,21 +427,34 @@
 
         <section id="favorite-music" class="academic-section">
           <h2><i class="fa-solid fa-music" aria-hidden="true"></i><span>My Favorite Music</span></h2>
-          <ul class="academic-music-list" aria-label="Zhihao Mao's favorite music">
+          <blockquote class="academic-music-quote">“Without music, life would be a mistake.” <cite>— Friedrich Nietzsche</cite></blockquote>
+          <div class="academic-music-gallery" aria-label="Zhihao Mao's favorite music">
             {% for track in academic.favorite_music %}
-              <li class="academic-music-item">
-                <span class="academic-music-mark" aria-hidden="true">♪</span>
-                <div class="academic-music-copy">
+              <article class="academic-music-card" data-music-track="{{ forloop.index0 }}">
+                <figure class="academic-music-cover">
+                  <img src="{{ track.cover | relative_url }}" alt="Cover artwork for {{ track.title }}" loading="lazy">
+                  <figcaption>{{ track.album }} · {{ track.year }}</figcaption>
+                </figure>
+                <div class="academic-music-card-copy">
                   <p class="academic-music-title">
                     <a href="{{ track.url }}" target="_blank" rel="noopener noreferrer">{{ track.title }}</a>
+                    {% if track.preview_url %}
+                      <button type="button" class="academic-music-queue" data-music-play="{{ forloop.index0 }}">
+                        [<i class="fa-solid fa-headphones" aria-hidden="true"></i> Play]
+                      </button>
+                    {% else %}
+                      <a class="academic-music-external" href="{{ track.url }}" target="_blank" rel="noopener noreferrer">[Listen ↗]</a>
+                    {% endif %}
                   </p>
-                  <p class="academic-music-meta">
-                    {{ track.artist }}{% if track.note %}<span> · {{ track.note }}</span>{% endif %}
-                  </p>
+                  <p class="academic-music-artist">{{ track.artist }}</p>
+                  <p class="academic-music-meta">{{ track.album }} · {{ track.year }}</p>
+                  {% if track.note %}
+                    <p class="academic-music-note">{{ track.note }}</p>
+                  {% endif %}
                 </div>
-              </li>
+              </article>
             {% endfor %}
-          </ul>
+          </div>
         </section>
 
         {% if content != empty %}
@@ -398,5 +473,9 @@
 
     <script src="{{ '/assets/js/academic-navigation.js' | relative_url | bust_file_cache }}"></script>
     <script src="{{ '/assets/js/academic-metrics.js' | relative_url | bust_file_cache }}"></script>
+    <script id="academic-music-data" type="application/json">
+      {{ academic.favorite_music | jsonify }}
+    </script>
+    <script src="{{ '/assets/js/academic-music.js' | relative_url | bust_file_cache }}"></script>
   </body>
 </html>
