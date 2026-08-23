@@ -42,7 +42,7 @@ The publications comparison checks the most detailed region at the same mobile s
 - Colors and visual tokens: the implementation keeps Diao's neutral gray/blue base and borrows Jiayu's restrained maroon publication and timeline accents without introducing card-heavy styling.
 - Image quality and asset fidelity: the portrait is an 800 × 800 WebP derived from the user-selected white-background photo; the CUG emblem comes from the university's official visual identity system; university logos and all eight publication thumbnails are real local assets with correct aspect ratios and no hotlinking. HeiSD, FreqCache, and 2D or 3D use framework figures downloaded from their arXiv HTML papers; CAMODE-CLA and APEX-SAM use framework overviews extracted from the official paper PDFs supplied by the user.
 - Copy and content: current undergraduate status, incoming PKU Ph.D. status, IF-Lab internship, publications, and awards are separated accurately. Published/accepted papers and preprints are not conflated.
-- New evidence-backed content: Funding lists the official 2024–2025 BYD Scholarship as scholarship support; About lists the user-confirmed 2027 reviewer service; Open Source lists the user-confirmed core-contributor roles for KERV, RoboECC, and RoboNix, the maintained CUG Template collection, four merged RoboNix upstream pull requests, two RoboNix skills, two services, and live star badges.
+- New evidence-backed content: Funding lists the official 2024–2025 BYD Scholarship as scholarship support; About lists the user-confirmed 2027 reviewer service; Open Source lists the user-confirmed core-contributor roles for KERV, RoboECC, and RoboNix, the public A-Pilot edge-MoE contribution, the maintained CUG Template collection, four merged RoboNix upstream pull requests, two RoboNix skills, two services, and live star badges.
 
 ## Comparison history
 
@@ -58,7 +58,7 @@ The publications comparison checks the most detailed region at the same mobile s
 - Dynamic citation link: KERV resolves to `Citations: 10` and links to its Google Scholar detail entry.
 - Browser console: no errors during the final local check.
 - Publication asset runtime check: 8 of 8 images completed with non-zero natural dimensions.
-- Responsive check: at a 390 × 844 viewport, the document client width is 375 px and scroll width is 375 px; all eight Open Source rows wrap without horizontal overflow.
+- Responsive check: at a 390 × 844 viewport, the document client width is 375 px and scroll width is 375 px; all nine Open Source rows wrap without horizontal overflow.
 - Jekyll production build: passed.
 
 ## Follow-up polish

@@ -350,6 +350,14 @@ open_source:
     links:
       - label: Paper
         url: https://arxiv.org/abs/2603.20711
+  - name: "A-Pilot: Quantized Edge Deployment for MoE Models"
+    role: Contributor
+    url: https://github.com/zhengzihaoPKU/A-Pilot-Quant-Deployment-for-Edge-MoEs
+    repository: zhengzihaoPKU/A-Pilot-Quant-Deployment-for-Edge-MoEs
+    description: Contributor to a reproducible MiniCPM-MoE 8×2B deployment on NVIDIA Jetson AGX Orin, with mixed-precision quantization, a C++/CUDA runtime, performance benchmarking, and model-quality evaluation.
+    links:
+      - label: Contribution
+        url: https://github.com/zhengzihaoPKU/A-Pilot-Quant-Deployment-for-Edge-MoEs/commit/e4bfe262a4d6557deaeccb5115e038e8d8e4e204
   - name: CUG Template
     role: "Creator & Maintainer"
     url: https://github.com/lusunn111/CUG-Template
