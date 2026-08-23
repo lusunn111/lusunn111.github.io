@@ -1,28 +1,38 @@
 # Zhihao Mao Academic Homepage
 
-This repository hosts the source code for `https://lusunn111.github.io`.
+This repository contains the source for [https://lusunn111.github.io](https://lusunn111.github.io). It uses [al-folio v1.2](https://github.com/alshedivat/al-folio/releases/tag/v1.2) and deploys automatically to GitHub Pages.
 
-The site is based on the AcadHomepage template by RayeRen and is currently used as a clean academic homepage for research profile, publications, projects, and contact information.
+## Content
 
-## Structure
+- `_pages/about.md`: verified biography, affiliation, research interests, and education.
+- `_pages/publications.md`: publication page; currently an explicit placeholder until the bibliography is verified.
+- `_pages/projects.md`: project page; currently an explicit placeholder until public projects are verified.
+- `_pages/blog.md`: lightweight redirect from the academic site's Blog navigation item to the separate blog.
+- `_data/socials.yml`: verified public social profiles.
+- `_bibliography/papers.bib`: the future publication source of truth.
 
-- `_config.yml`: site metadata, author profile, and Jekyll configuration.
-- `_pages/about.md`: homepage content.
-- `_data/navigation.yml`: top navigation anchors.
-- `images/`: favicon and image assets.
+The internal al-folio blog, demo news, demo projects, demo publications, and demo CV are intentionally disabled. The public blog is hosted separately at [https://lusunn111-blog.pages.dev](https://lusunn111-blog.pages.dev).
 
-## Local Preview
+## Local preview
 
-This project is a Jekyll site. On a machine with Ruby and Bundler installed:
+The recommended reproducible setup is Docker:
+
+```bash
+docker compose up
+```
+
+Then open `http://localhost:8080`.
+
+With Ruby 3.3 and Bundler installed, the site can also be built directly:
 
 ```bash
 bundle install
+bundle exec jekyll build
 bundle exec jekyll serve
 ```
 
-Then open `http://127.0.0.1:4000`.
+## Deployment
 
-## Notes
+Pushes to `master` trigger `.github/workflows/deploy.yml`, which builds the site and publishes the generated artifact through GitHub Pages. In the repository settings, the Pages source must be **GitHub Actions**.
 
-- Google Scholar citation automation is intentionally disabled until the correct Scholar ID is confirmed.
-- Publications, CV, and public contact email should be added only after the final content is verified.
+Do not add publication, email, Google Scholar, ORCID, or CV data until it has been verified.

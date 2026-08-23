@@ -1,57 +1,42 @@
 ---
+layout: about
+title: about
 permalink: /
-title: ""
-excerpt: ""
-author_profile: true
-redirect_from:
-  - /about/
-  - /about.html
+subtitle: Ph.D. Student, School of Computer Science, Peking University
+
+profile:
+  align: right
+  image: prof_pic.jpg
+  image_circular: true
+  more_info: >
+    <p>School of Computer Science</p>
+    <p>Peking University</p>
+    <p>Beijing, China</p>
+
+selected_papers: false
+social: true
+
+announcements:
+  enabled: false
+
+latest_posts:
+  enabled: false
 ---
 
-<span class='anchor' id='about-me'></span>
+I am a Ph.D. student in the School of Computer Science at Peking University, advised by Prof. Xiang Chen. My work focuses on systems optimization for embodied intelligence, with an emphasis on making intelligent agents more efficient, reliable, and deployable in real environments.
 
-I am a Ph.D. student in the School of Computer Science at Peking University, advised by Prof. Xiang Chen. My work is centered on systems optimization for embodied intelligence, especially how world models and action models can make embodied agents more efficient, reliable, and deployable.
+## Research interests
 
-I care about research that connects mechanism, system design, and real execution. My current interests include world models, physical AI, WAM, inference acceleration, and the engineering path from a research idea to a working system.
+My current interests span embodied intelligence, world models, physical AI, WAM, and systems optimization. I am particularly interested in the interaction between learning mechanisms and system design: how perception, planning, action, training, inference, scheduling, caching, and deployment can be co-designed rather than optimized in isolation.
 
-<span class='anchor' id='research'></span>
+## Research approach
 
-# Research
+I care about research that connects a clear mechanism to a working system and defensible experimental evidence. My goal is to turn research ideas into reproducible implementations that can be evaluated under realistic constraints.
 
-- **Embodied intelligence systems.** Efficient perception, planning, and action pipelines for embodied agents.
-- **World models and WAM.** World-action modeling, action prediction, and reusable world context for long-horizon interaction.
-- **Physical AI.** System support for agents that interact with physical environments, simulators, sensors, and robots.
-- **Systems optimization.** Training, inference, scheduling, caching, and deployment techniques that reduce latency and compute cost.
-- **Research engineering.** Reproducible code, clear experimental evidence, and paper writing with a defensible technical story.
+## Education
 
-<span class='anchor' id='news'></span>
+**Ph.D. Student**, School of Computer Science, Peking University. Advisor: Prof. Xiang Chen.
 
-# News
+## Contact
 
-- *2026.06*: This academic homepage was rebuilt with a clean Jekyll-based structure for GitHub Pages.
-
-<span class='anchor' id='publications'></span>
-
-# Publications
-
-Selected publications will be updated after the final bibliography, links, and author order are verified.
-
-<span class='anchor' id='projects'></span>
-
-# Projects
-
-- **Personal academic homepage.** A clean GitHub Pages site for research profile, publications, projects, and contact information.
-- **Research blog infrastructure.** A separate Hexo-based blog is planned for longer technical notes and paper-reading records.
-
-<span class='anchor' id='education'></span>
-
-# Education
-
-- **Ph.D. Student**, School of Computer Science, Peking University. Advisor: Prof. Xiang Chen.
-
-<span class='anchor' id='contact'></span>
-
-# Contact
-
-- GitHub: [lusunn111](https://github.com/lusunn111)
-- Homepage: [https://lusunn111.github.io](https://lusunn111.github.io)
+Verified public links are listed below. Publication records, a public CV, and additional contact channels will be added after they are confirmed.
