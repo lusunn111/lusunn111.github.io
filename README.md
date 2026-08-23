@@ -4,7 +4,10 @@ This repository contains the source for [https://lusunn111.github.io](https://lu
 
 ## Content
 
-- `_pages/about.md`: verified biography, affiliation, research interests, and education.
+- `_pages/about.md`: homepage entry point using the custom academic profile layout.
+- `_data/academic_profile.yml`: verified biography plus structured placeholders for education, experience, news, honors, funding, publications, patents, software, competitions, and favorite music.
+- `_layouts/academic-profile.liquid`: AcadHomepage-inspired single-page structure implemented on top of the al-folio runtime.
+- `assets/css/academic-profile.css`: responsive desktop and mobile presentation for the academic profile.
 - `_pages/publications.md`: publication page; currently an explicit placeholder until the bibliography is verified.
 - `_pages/projects.md`: project page; currently an explicit placeholder until public projects are verified.
 - `_pages/blog.md`: lightweight redirect from the academic site's Blog navigation item to the separate blog.

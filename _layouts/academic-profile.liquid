@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    {% include head.liquid %}
+    <link rel="stylesheet" href="{{ '/assets/css/academic-profile.css' | relative_url | bust_file_cache }}">
+  </head>
+  <body class="academic-profile-page">
+    {% assign academic = site.data.academic_profile %}
+
+    <a class="academic-skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="academic-site-header">
+      <nav class="academic-navigation" aria-label="Academic profile sections">
+        <ul class="academic-nav-list">
+          {% for item in academic.navigation %}
+            <li>
+              <a
+                href="{{ item.target }}"
+                {% if item.external %}
+                  target="_blank" rel="noopener noreferrer"
+                {% endif %}
+              >
+                {{- item.label -}}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <button
+          class="academic-menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="academic-overflow-menu"
+          aria-label="Open section navigation"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <div id="academic-overflow-menu" class="academic-overflow-menu" hidden>
+          {% for item in academic.navigation %}
+            <a
+              href="{{ item.target }}"
+              {% if item.external %}
+                target="_blank" rel="noopener noreferrer"
+              {% endif %}
+            >
+              {{- item.label -}}
+            </a>
+          {% endfor %}
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="academic-shell">
+      <aside class="academic-profile" aria-label="Profile">
+        <img
+          class="academic-avatar"
+          src="{{ academic.profile.image | relative_url }}"
+          alt="Portrait of {{ academic.profile.name }}"
+          width="184"
+          height="184"
+          loading="eager"
+        >
+        <div class="academic-profile-copy">
+          <h1>{{ academic.profile.name }}</h1>
+          <p class="academic-role">{{ academic.profile.role }}</p>
+          <p class="academic-affiliation">{{ academic.profile.affiliation }}</p>
+          <p class="academic-location">{{ academic.profile.location }}</p>
+        </div>
+        <ul class="academic-profile-links" aria-label="Verified public profiles">
+          {% for link in academic.profile.links %}
+            <li>
+              <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+                <i class="{{ link.icon }}" aria-hidden="true"></i>
+                <span>{{ link.label }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </aside>
+
+      <div class="academic-document">
+        <section id="about-me" class="academic-section">
+          <h2><i class="fa-solid fa-address-card" aria-hidden="true"></i><span>About Me</span></h2>
+          {% for paragraph in academic.about %}
+            <p>{{ paragraph }}</p>
+          {% endfor %}
+        </section>
+
+        <section id="education" class="academic-section">
+          <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span>Education</span></h2>
+          {% for item in academic.education %}
+            <ul class="academic-fact-list">
+              <li>
+                <strong>{{ item.institution }}</strong>
+              </li>
+              <li>{{ item.degree }}</li>
+              <li>Advisor: {{ item.advisor }}</li>
+            </ul>
+          {% endfor %}
+        </section>
+
+        <section id="experience" class="academic-section">
+          <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i><span>Experience</span></h2>
+          <div class="academic-experience-list">
+            {% for item in academic.experience %}
+              <article class="academic-experience-item{% if item.placeholder %} academic-placeholder{% endif %}">
+                <p class="academic-experience-period">{{ item.period }}</p>
+                <div class="academic-experience-copy">
+                  <p>
+                    <strong>{{ item.title }}</strong> @ {{ item.organization }}
+                  </p>
+                  <p>Advisor: {{ item.advisor }}</p>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        {% for section in academic.placeholder_sections %}
+          <section id="{{ section.id }}" class="academic-section academic-empty-section">
+            <h2>
+              <i class="{{ section.icon }}" aria-hidden="true"></i><span>{{ section.label }}</span>
+            </h2>
+            <p class="academic-placeholder">{{ section.note }}</p>
+          </section>
+        {% endfor %}
+
+        {% if content != empty %}
+          <div class="academic-extra-content">{{ content }}</div>
+        {% endif %}
+      </div>
+    </main>
+
+    <footer class="academic-footer">
+      <p>
+        © {{ 'now' | date: '%Y' }}
+        {{ academic.profile.name }}. Powered by <a href="https://github.com/alshedivat/al-folio">al-folio</a>. Layout inspired by
+        <a href="https://github.com/RayeRen/acad-homepage.github.io">AcadHomepage</a>.
+      </p>
+    </footer>
+
+    <script src="{{ '/assets/js/academic-navigation.js' | relative_url | bust_file_cache }}"></script>
+  </body>
+</html>

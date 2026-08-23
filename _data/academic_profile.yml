@@ -1,0 +1,93 @@
+profile:
+  name: Zhihao Mao
+  role: Ph.D. Student
+  affiliation: School of Computer Science, Peking University
+  location: Beijing, China
+  image: /assets/img/prof_pic.jpg
+  links:
+    - label: GitHub
+      url: https://github.com/lusunn111
+      icon: fa-brands fa-github
+
+navigation:
+  - label: Homepage
+    target: "#about-me"
+  - label: About Me
+    target: "#about-me"
+  - label: Education
+    target: "#education"
+  - label: Experience
+    target: "#experience"
+  - label: News
+    target: "#news"
+  - label: Honors
+    target: "#honors"
+  - label: Funding
+    target: "#funding"
+  - label: Publications
+    target: "#publications"
+  - label: Patents
+    target: "#patents"
+  - label: Software
+    target: "#software"
+  - label: Competitions
+    target: "#competitions"
+  - label: My Favorite Music
+    target: "#favorite-music"
+  - label: Blog ↗
+    target: https://lusunn111-blog.pages.dev/
+    external: true
+
+about:
+  - I am a Ph.D. student in the School of Computer Science at Peking University, advised by Prof. Xiang Chen.
+  - My research interests include systems optimization, embodied intelligence, world models, Physical AI, and WAM.
+
+education:
+  - institution: Peking University
+    degree: Ph.D. Student in Computer Science
+    advisor: Prof. Xiang Chen
+
+experience:
+  - period: "[Date to be added] – Present"
+    title: Ph.D. Student
+    organization: Peking University
+    advisor: Prof. Xiang Chen
+  - period: "[Date to be added]"
+    title: Research Intern
+    organization: "[Institution to be added]"
+    advisor: "[To be added]"
+    placeholder: true
+
+placeholder_sections:
+  - id: news
+    label: News
+    icon: fa-solid fa-newspaper
+    note: To be added after verification.
+  - id: honors
+    label: Honors
+    icon: fa-solid fa-award
+    note: To be added after verification.
+  - id: funding
+    label: Funding
+    icon: fa-solid fa-circle-dollar-to-slot
+    note: To be added after verification.
+  - id: publications
+    label: Publications
+    icon: fa-solid fa-book-open
+    note: Publication list will be added after verification.
+  - id: patents
+    label: Patents
+    icon: fa-solid fa-certificate
+    note: To be added after verification.
+  - id: software
+    label: Software
+    icon: fa-solid fa-code
+    note: To be added after verification.
+  - id: competitions
+    label: Competitions
+    icon: fa-solid fa-trophy
+    note: To be added after verification.
+  - id: favorite-music
+    label: My Favorite Music
+    icon: fa-solid fa-music
+    note: Track to be added.
