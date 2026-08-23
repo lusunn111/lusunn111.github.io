@@ -50,7 +50,10 @@ navigation:
 about:
   - >-
     I am an undergraduate in Computer Science and Technology at <a href="https://www.cug.edu.cn/" target="_blank" rel="noopener noreferrer">China University of Geosciences (Wuhan)</a>, and an incoming Ph.D. student in Computer Science at <a href="https://www.pku.edu.cn/" target="_blank" rel="noopener noreferrer">Peking University</a>, starting in Fall 2027. I currently work as a research intern in <a href="https://if-lab-pku.github.io/" target="_blank" rel="noopener noreferrer">IF-Lab</a> under the supervision of <a href="https://if-lab-pku.github.io/" target="_blank" rel="noopener noreferrer">Prof. Xiang Chen</a>.
-  - My research focuses on efficient systems for embodied intelligence, particularly efficient inference for vision-language-action and vision-language-navigation models, token caching, speculative decoding, world models, and Physical AI.
+  - >-
+    I build efficient systems for Physical AI. My current work asks a simple question: how can vision-language-action, vision-language-navigation, and world-action models run fast enough, reliably enough, and efficiently enough for real robots? I explore speculative decoding, token caching, sparse computation, and edge-cloud collaboration from algorithm design to runtime implementation.
+  - >-
+    In the long run, I am interested in the system bottlenecks behind long-horizon reasoning, physical consistency, and closed-loop robot control. 🤝 I am always happy to discuss research and open-source collaboration in embodied AI systems, efficient inference, and related infrastructure. If our interests overlap, feel free to email me.
 
 academic_services:
   label: Conference Reviewer
@@ -80,8 +83,7 @@ education:
   - period: Sep. 2023 – Jul. 2027 (expected)
     institution: China University of Geosciences (Wuhan)
     institution_url: https://www.cug.edu.cn/
-    logo: /assets/img/cug-logo.png
-    logo_class: academic-logo-wide
+    logo: /assets/img/cug-emblem.png
     degree: B.Eng. in Computer Science and Technology
     detail: Major rank 1/53
   - period: Starting Sep. 2027
@@ -105,15 +107,13 @@ experience:
     title: Undergraduate Researcher
     organization: China University of Geosciences (Wuhan)
     organization_url: https://www.cug.edu.cn/
-    logo: /assets/img/cug-logo.png
-    logo_class: academic-logo-wide
+    logo: /assets/img/cug-emblem.png
     description: Algorithm and data analysis for an intelligent Coriolis-force experiment platform.
   - period: Nov. 2024 – May 2025
     title: Undergraduate Researcher
     organization: China University of Geosciences (Wuhan)
     organization_url: https://www.cug.edu.cn/
-    logo: /assets/img/cug-logo.png
-    logo_class: academic-logo-wide
+    logo: /assets/img/cug-emblem.png
     description: Training-free few-shot medical image segmentation.
 
 news:
@@ -123,6 +123,9 @@ news:
   - date: "2026"
     icon: fa-solid fa-circle-check
     title: KERV was accepted by DAC 2026.
+  - date: "2026"
+    icon: fa-solid fa-circle-check
+    title: APEX-SAM was accepted by MICCAI 2026.
   - date: "2026"
     icon: fa-solid fa-circle-check
     title: RAP was accepted by IJCNN 2026.
@@ -169,8 +172,27 @@ publication_groups:
           - label: Paper
             url: https://arxiv.org/abs/2603.01581
           - label: Code
-            url: https://github.com/lusunn111/KERV
-        star_repository: lusunn111/KERV
+            url: https://github.com/zhengzihaoPKU/KERV
+        star_repository: zhengzihaoPKU/KERV
+      - title: "APEX-SAM: Anatomy-aware Prompting with Expert Retrieval for Training-free Medical Image Segmentation"
+        year: "2026"
+        representative: true
+        image: /assets/img/publications/apex-sam-overview.png
+        image_alt: Overview of the APEX-SAM medical image segmentation framework
+        authors:
+          - name: Zhihao Mao
+            self: true
+          - name: Bangpu Chen
+          - name: Qi Lei
+          - name: Jiaqi Tan
+          - name: Kun Sun
+        venue: MICCAI 2026, accepted
+        links:
+          - label: Project
+            url: https://trump0412.github.io/APEX-SAM/
+          - label: Code
+            url: https://github.com/Trump0412/APEX-SAM
+        star_repository: Trump0412/APEX-SAM
       - title: "RAP: Retrieve, Adapt, and Prompt-Fit for Training-Free Few-Shot Medical Image Segmentation"
         year: "2026"
         representative: true
@@ -186,8 +208,8 @@ publication_groups:
             url: https://arxiv.org/abs/2603.27705
       - title: A Clustering Aided Multi-Operator Differential Evolution via Cluster-Level Adaptation
         year: "2026"
-        image: /assets/img/publications/camode-paper-page.png
-        image_alt: Title of the CAMODE-CLA paper
+        image: /assets/img/publications/camode-overview.png
+        image_alt: Framework overview of CAMODE-CLA
         authors:
           - name: Qi Lei
           - name: Zhihao Mao
@@ -305,11 +327,34 @@ competitions:
 
 software:
   - name: KERV
-    url: https://github.com/lusunn111/KERV
-    repository: lusunn111/KERV
-    description: Public research implementation of kinematic-rectified speculative decoding for embodied VLA models.
+    url: https://github.com/zhengzihaoPKU/KERV
+    repository: zhengzihaoPKU/KERV
+    description: Official open-source implementation of kinematic-rectified speculative decoding for embodied VLA models.
 
 open_source:
+  - name: KERV
+    role: Core Contributor
+    url: https://github.com/zhengzihaoPKU/KERV
+    repository: zhengzihaoPKU/KERV
+    description: Core contributor to the open-source implementation of kinematic-rectified speculative decoding for embodied VLA models, including project presentation, figure cleanup, and contributor metadata.
+    links:
+      - label: Project Update PR
+        url: https://github.com/zhengzihaoPKU/KERV/pull/4
+      - label: Contributor PR
+        url: https://github.com/zhengzihaoPKU/KERV/pull/2
+  - name: RoboECC
+    role: Core Contributor
+    url: https://github.com/zhengzihaoPKU/RoboECC
+    repository: zhengzihaoPKU/RoboECC
+    description: Core contributor to the open-source edge-cloud collaborative deployment framework for VLA models, covering multi-factor-aware partitioning and online deployment adjustment.
+    links:
+      - label: Paper
+        url: https://arxiv.org/abs/2603.20711
+  - name: CUG Template
+    role: "Creator & Maintainer"
+    url: https://github.com/lusunn111/CUG-Template
+    repository: lusunn111/CUG-Template
+    description: Creator and maintainer of an unofficial template collection for China University of Geosciences (Wuhan), covering PowerPoint, Beamer, Word, and LaTeX reports and thesis defenses.
   - name: RoboNix Ecosystem
     role: Core Contributor
     url: https://github.com/syswonder/robonix
