@@ -1,7 +1,7 @@
 profile:
   name: Zhihao Mao
   role: Incoming Ph.D. Student
-  affiliation: Peking University · Fall 2027
+  affiliation: School of Computer Science<br>Peking University · Fall 2027
   location: Beijing, China
   image: /assets/img/zhihao-mao.webp
   links:
@@ -49,7 +49,7 @@ navigation:
 
 about:
   - >-
-    I am an undergraduate in Computer Science and Technology at <a href="https://www.cug.edu.cn/" target="_blank" rel="noopener noreferrer">China University of Geosciences (Wuhan)</a>, and an incoming Ph.D. student in Computer Science at <a href="https://www.pku.edu.cn/" target="_blank" rel="noopener noreferrer">Peking University</a>, starting in Fall 2027. I currently work as a research intern in <a href="https://if-lab-pku.github.io/" target="_blank" rel="noopener noreferrer">IF-Lab</a> under the supervision of <a href="https://if-lab-pku.github.io/" target="_blank" rel="noopener noreferrer">Prof. Xiang Chen</a>.
+    I am an undergraduate in Computer Science and Technology at <a href="https://www.cug.edu.cn/" target="_blank" rel="noopener noreferrer">China University of Geosciences (Wuhan)</a>, and an incoming Ph.D. student at the <a href="https://cs.pku.edu.cn/" target="_blank" rel="noopener noreferrer">School of Computer Science, Peking University</a>, starting in Fall 2027. I currently work as a research intern in <a href="https://if-lab-pku.github.io/" target="_blank" rel="noopener noreferrer">IF-Lab</a> under the supervision of <a href="https://if-lab-pku.github.io/" target="_blank" rel="noopener noreferrer">Prof. Xiang Chen</a>.
   - >-
     I build efficient systems for Physical AI. My current work asks a simple question: how can vision-language-action, vision-language-navigation, and world-action models run fast enough, reliably enough, and efficiently enough for real robots? I explore speculative decoding, token caching, sparse computation, and edge-cloud collaboration from algorithm design to runtime implementation.
   - >-
@@ -87,8 +87,8 @@ education:
     degree: B.Eng. in Computer Science and Technology
     detail: Major rank 1/53
   - period: Starting Sep. 2027
-    institution: Peking University
-    institution_url: https://www.pku.edu.cn/
+    institution: School of Computer Science, Peking University
+    institution_url: https://cs.pku.edu.cn/
     logo: /assets/img/pku-logo.png
     degree: Incoming Ph.D. Student in Computer Science
     advisor: Prof. Xiang Chen
@@ -119,7 +119,7 @@ experience:
 news:
   - date: Aug. 2026
     icon: fa-solid fa-graduation-cap
-    title: I will join Peking University as a Ph.D. student in Fall 2027.
+    title: I will join the School of Computer Science at Peking University as a Ph.D. student in Fall 2027.
   - date: "2026"
     icon: fa-solid fa-circle-check
     title: KERV was accepted by DAC 2026.
