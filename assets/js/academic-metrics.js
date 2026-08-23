@@ -63,7 +63,7 @@
       button.addEventListener('click', () => applyFilter(button.dataset.publicationFilter));
     });
 
-    applyFilter('representative');
+    applyFilter('all');
   };
 
   initializePublicationFilter();

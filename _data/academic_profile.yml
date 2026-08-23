@@ -106,12 +106,16 @@ experience:
 
 news:
   - date: Aug. 2026
+    icon: fa-solid fa-graduation-cap
     title: I will join Peking University as a Ph.D. student in Fall 2027.
   - date: "2026"
+    icon: fa-solid fa-circle-check
     title: KERV was accepted by DAC 2026.
   - date: "2026"
+    icon: fa-solid fa-circle-check
     title: RAP was accepted by IJCNN 2026.
   - date: Jul. 2026
+    icon: fa-solid fa-book-open
     title: Our differential-evolution poster paper was published in the GECCO 2026 Companion.
 
 honors:

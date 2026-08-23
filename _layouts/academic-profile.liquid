@@ -179,7 +179,10 @@
             {% for item in academic.news %}
               <article class="academic-record-item">
                 <p class="academic-record-date">{{ item.date }}</p>
-                <div class="academic-record-copy"><p>{{ item.title }}</p></div>
+                <div class="academic-record-copy academic-news-copy">
+                  <i class="{{ item.icon }}" aria-hidden="true"></i>
+                  <p>{{ item.title }}</p>
+                </div>
               </article>
             {% endfor %}
           </div>
@@ -207,9 +210,9 @@
           <div class="academic-section-heading-row">
             <h2><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Publications</span></h2>
             <div class="academic-publication-filters" aria-label="Publication visibility">
-              <button type="button" data-publication-filter="representative" aria-pressed="true">Representative</button>
+              <button type="button" data-publication-filter="representative" aria-pressed="false">Representative</button>
               <span aria-hidden="true">/</span>
-              <button type="button" data-publication-filter="all" aria-pressed="false">Show All</button>
+              <button type="button" data-publication-filter="all" aria-pressed="true">Show All</button>
             </div>
           </div>
 

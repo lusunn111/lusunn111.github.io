@@ -24,7 +24,7 @@
 
 - Desktop browser viewport: 1280 × 720 CSS px, device pixel ratio 1. Browser capture: 1220 × 712 px for each source and implementation. No density resampling was required.
 - Mobile browser viewport: 390 × 844 CSS px, device pixel ratio 1. Browser capture: 375 × 812 px for both Jiayu and the implementation. No density resampling was required.
-- State: light theme, initial page load. Publications were additionally checked in representative and all-publications states.
+- State: light theme, initial page load with all publications visible. Publications were additionally checked in representative and all-publications states.
 
 ## Full-view comparison evidence
 
@@ -51,8 +51,8 @@ The publications comparison checks the most detailed region at the same mobile s
 
 ## Primary interactions and runtime checks
 
-- Representative publications: 3 visible.
-- Show All: 7 visible.
+- Initial Show All state: 7 visible.
+- Representative filter: 3 visible.
 - Mobile overflow navigation: opens, reports `aria-expanded=true`, and closes correctly.
 - Dynamic citation link: KERV resolves to `Citations: 10` and links to its Google Scholar detail entry.
 - Browser console: no errors during the final local check.

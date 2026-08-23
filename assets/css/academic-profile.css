@@ -355,6 +355,19 @@ body.academic-profile-page {
   margin-top: 2px;
 }
 
+.academic-news-copy {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.academic-news-copy > i {
+  flex: 0 0 14px;
+  color: #9b3022;
+  font-size: 12px;
+  text-align: center;
+}
+
 .academic-compact-list {
   gap: 5px;
 }
