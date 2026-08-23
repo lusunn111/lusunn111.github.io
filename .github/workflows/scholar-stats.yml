@@ -1,0 +1,49 @@
+name: Update Google Scholar statistics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: google-scholar-statistics
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the homepage source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: scripts/scholar-requirements.txt
+
+      - name: Fetch the public Scholar profile
+        env:
+          GOOGLE_SCHOLAR_ID: lQmlVzoAAAAJ
+          SCHOLAR_OUTPUT_DIR: scholar-stats
+        run: |
+          python -m pip install --requirement scripts/scholar-requirements.txt
+          python scripts/update_scholar_stats.py
+
+      - name: Publish the generated JSON branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd scholar-stats
+          git init
+          git checkout -b google-scholar-stats
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- gs_data.json gs_data_shieldsio.json
+          git commit -m "Update Google Scholar statistics"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin google-scholar-stats

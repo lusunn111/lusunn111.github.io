@@ -1,10 +1,17 @@
 profile:
   name: Zhihao Mao
-  role: Ph.D. Student
-  affiliation: School of Computer Science, Peking University
+  role: Incoming Ph.D. Student
+  affiliation: Peking University · Fall 2027
   location: Beijing, China
-  image: /assets/img/prof_pic.jpg
+  image: /assets/img/zhihao-mao.webp
   links:
+    - label: Email
+      url: mailto:htxmzh@gmail.com
+      icon: fa-solid fa-envelope
+      external: false
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=lQmlVzoAAAAJ&hl=en
+      icon: ai ai-google-scholar
     - label: GitHub
       url: https://github.com/lusunn111
       icon: fa-brands fa-github
@@ -39,54 +46,247 @@ navigation:
     external: true
 
 about:
-  - I am a Ph.D. student in the School of Computer Science at Peking University, advised by Prof. Xiang Chen.
-  - My research interests include systems optimization, embodied intelligence, world models, Physical AI, and WAM.
+  - >-
+    I am an undergraduate in Computer Science and Technology at <a href="https://www.cug.edu.cn/" target="_blank" rel="noopener noreferrer">China University of Geosciences (Wuhan)</a>, and an incoming Ph.D. student in Computer Science at <a href="https://www.pku.edu.cn/" target="_blank" rel="noopener noreferrer">Peking University</a>, starting in Fall 2027. I currently work as a research intern in <a href="https://if-lab-pku.github.io/" target="_blank" rel="noopener noreferrer">IF-Lab</a> under the supervision of <a href="https://if-lab-pku.github.io/" target="_blank" rel="noopener noreferrer">Prof. Xiang Chen</a>.
+  - My research focuses on efficient systems for embodied intelligence, particularly efficient inference for vision-language-action and vision-language-navigation models, token caching, speculative decoding, world models, and Physical AI.
+
+metrics:
+  - label: Google Scholar citations
+    url: https://scholar.google.com/citations?user=lQmlVzoAAAAJ&hl=en
+    image: https://img.shields.io/endpoint?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Flusunn111%2Flusunn111.github.io%40google-scholar-stats%2Fgs_data_shieldsio.json&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=Citations
+  - label: GitHub stars
+    url: https://github.com/lusunn111
+    image: https://img.shields.io/github/stars/lusunn111
+  - label: GitHub followers
+    url: https://github.com/lusunn111?tab=followers
+    image: https://img.shields.io/github/followers/lusunn111
+  - label: Visitors
+    url: https://visitorbadge.io/status?path=lusunn111.github.io
+    image: https://visitor-badge.laobi.icu/badge?page_id=lusunn111.github.io
 
 education:
-  - institution: Peking University
-    degree: Ph.D. Student in Computer Science
+  - period: Sep. 2023 – Jul. 2027 (expected)
+    institution: China University of Geosciences (Wuhan)
+    institution_url: https://www.cug.edu.cn/
+    logo: /assets/img/cug-logo.png
+    logo_class: academic-logo-wide
+    degree: B.Eng. in Computer Science and Technology
+    detail: Major rank 1/53
+  - period: Starting Sep. 2027
+    institution: Peking University
+    institution_url: https://www.pku.edu.cn/
+    logo: /assets/img/pku-logo.png
+    degree: Incoming Ph.D. Student in Computer Science
     advisor: Prof. Xiang Chen
+    advisor_url: https://if-lab-pku.github.io/
 
 experience:
-  - period: "[Date to be added] – Present"
-    title: Ph.D. Student
-    organization: Peking University
-    advisor: Prof. Xiang Chen
-  - period: "[Date to be added]"
+  - period: Oct. 2025 – Present
     title: Research Intern
-    organization: "[Institution to be added]"
-    advisor: "[To be added]"
-    placeholder: true
+    organization: IF-Lab, Peking University
+    organization_url: https://if-lab-pku.github.io/
+    logo: /assets/img/pku-logo.png
+    advisor: Prof. Xiang Chen
+    advisor_url: https://if-lab-pku.github.io/
+    description: Efficient VLA/VLN inference, token caching, speculative decoding, and systems optimization for embodied AI.
+  - period: Feb. 2025 – Sep. 2025
+    title: Undergraduate Researcher
+    organization: China University of Geosciences (Wuhan)
+    organization_url: https://www.cug.edu.cn/
+    logo: /assets/img/cug-logo.png
+    logo_class: academic-logo-wide
+    description: Algorithm and data analysis for an intelligent Coriolis-force experiment platform.
+  - period: Nov. 2024 – May 2025
+    title: Undergraduate Researcher
+    organization: China University of Geosciences (Wuhan)
+    organization_url: https://www.cug.edu.cn/
+    logo: /assets/img/cug-logo.png
+    logo_class: academic-logo-wide
+    description: Training-free few-shot medical image segmentation.
+
+news:
+  - date: Aug. 2026
+    title: I will join Peking University as a Ph.D. student in Fall 2027.
+  - date: "2026"
+    title: KERV was accepted by DAC 2026.
+  - date: "2026"
+    title: RAP was accepted by IJCNN 2026.
+  - date: Jul. 2026
+    title: Our differential-evolution poster paper was published in the GECCO 2026 Companion.
+
+honors:
+  - date: "2026"
+    title: Excellent Poster Paper Award, FJSP-DUET
+  - date: "2026"
+    title: Meritorious Winner, Mathematical Contest in Modeling
+  - date: "2025"
+    title: First Prize, National University Physics Experiment Competition
+
+publication_groups:
+  - label: Published & Accepted
+    entries:
+      - title: "KERV: Kinematic-Rectified Speculative Decoding for Embodied VLA Models"
+        year: "2026"
+        representative: true
+        image: /assets/img/publications/kerv-overview.png
+        image_alt: Overview of the KERV speculative decoding framework
+        authors:
+          - name: Zihao Zheng
+          - name: Zhihao Mao
+            self: true
+          - name: Maoliang Li
+          - name: Jiayu Chen
+          - name: Xinhao Sun
+          - name: Zhaobo Zhang
+          - name: Donggang Cao
+          - name: Hong Mei
+          - name: Xiang Chen
+        venue: DAC 2026, accepted / to appear
+        links:
+          - label: Paper
+            url: https://arxiv.org/abs/2603.01581
+          - label: Code
+            url: https://github.com/lusunn111/KERV
+        star_repository: lusunn111/KERV
+      - title: "RAP: Retrieve, Adapt, and Prompt-Fit for Training-Free Few-Shot Medical Image Segmentation"
+        year: "2026"
+        representative: true
+        image: /assets/img/publications/rap-overview.png
+        image_alt: Overview of the RAP medical image segmentation framework
+        authors:
+          - name: Zhihao Mao
+            self: true
+          - name: Bangpu Chen
+        venue: IJCNN 2026, accepted
+        links:
+          - label: Paper
+            url: https://arxiv.org/abs/2603.27705
+      - title: A Clustering Aided Multi-Operator Differential Evolution via Cluster-Level Adaptation
+        year: "2026"
+        authors:
+          - name: Qi Lei
+          - name: Zhihao Mao
+            self: true
+          - name: Bangpu Chen
+          - name: Zhuoming Yuan
+          - name: Lei Peng
+        venue: GECCO 2026 Companion, pp. 349–352 (Poster Paper)
+        links:
+          - label: Paper
+            url: https://doi.org/10.1145/3795101.3805357
+  - label: Preprints
+    entries:
+      - title: "HeiSD: Hybrid Speculative Decoding for Embodied Vision-Language-Action Models with Kinematic Awareness"
+        year: "2026"
+        authors:
+          - name: Zihao Zheng
+          - name: Zhihao Mao
+            self: true
+          - name: Sicheng Tian
+          - name: Maoliang Li
+          - name: Jiayu Chen
+          - name: Xinhao Sun
+          - name: Zhaobo Zhang
+          - name: Xuanzhe Liu
+          - name: Donggang Cao
+          - name: Hong Mei
+          - name: Xiang Chen
+        venue: arXiv preprint arXiv:2603.17573
+        links:
+          - label: Paper
+            url: https://arxiv.org/abs/2603.17573
+      - title: "VLN-Cache: Enabling Token Caching for VLN Models with Visual/Semantic Dynamics Awareness"
+        year: "2026"
+        representative: true
+        image: /assets/img/publications/vln-cache-overview.png
+        image_alt: Motivation and framework overview of VLN-Cache
+        authors:
+          - name: Zihao Zheng
+          - name: Zhihao Mao
+            self: true
+          - name: Xingyue Zhou
+          - name: Jiayu Chen
+          - name: Maoliang Li
+          - name: Xinhao Sun
+          - name: Hailong Zou
+          - name: Zhaobo Zhang
+          - name: Xuanzhe Liu
+          - name: Donggang Cao
+          - name: Hong Mei
+          - name: Xiang Chen
+        venue: arXiv preprint arXiv:2603.07080
+        links:
+          - label: Paper
+            url: https://arxiv.org/abs/2603.07080
+      - title: "FreqCache: Accelerating Embodied VLN Models with Adaptive Frequency-Guided Token Caching"
+        year: "2026"
+        authors:
+          - name: Zihao Zheng
+          - name: Xingyue Zhou
+          - name: Zhihao Mao
+            self: true
+          - name: Songyu Sun
+          - name: Lingyue Zhang
+          - name: Yulong Ao
+          - name: Yupu Feng
+          - name: Qiongqiong Zhang
+          - name: Yonghua Lin
+          - name: Xiang Chen
+        venue: arXiv preprint arXiv:2604.24391
+        links:
+          - label: Paper
+            url: https://arxiv.org/abs/2604.24391
+      - title: "2D or 3D: Who Governs Salience in VLA Models? -- Tri-Stage Token Pruning Framework with Modality Salience Awareness"
+        year: "2026"
+        authors:
+          - name: Zihao Zheng
+          - name: Sicheng Tian
+          - name: Zhihao Mao
+            self: true
+          - name: Lingyue Zhang
+          - name: Chenyue Li
+          - name: Ziyun Zhang
+          - name: Hong Gao
+          - name: Yuchen Huang
+          - name: Yutong Xu
+          - name: Guojie Luo
+          - name: Xiang Chen
+        venue: arXiv preprint arXiv:2604.09244
+        links:
+          - label: Paper
+            url: https://arxiv.org/abs/2604.09244
+
+competitions:
+  - date: "2025"
+    title: Bronze Medal, ICPC Asia Nanjing Regional Contest
+  - date: "2025"
+    title: Bronze Medal, ICPC Asia Chengdu Regional Contest
+  - date: "2025"
+    title: National Second Prize, RoboCup China, Advanced Robot Vision 3D Recognition
+  - date: "2025"
+    title: National Team Second Prize, Group Programming Ladder Tournament
+  - date: "2025"
+    title: First Prize, Hubei Mathematical Contest in Modeling
+  - date: "2024"
+    title: National First Prize, RAICom, Machine Vision System Innovation
+  - date: "2024"
+    title: National Third Prize, Lanqiao Cup C/C++ Programming, University Group A
+
+software:
+  - name: KERV
+    url: https://github.com/lusunn111/KERV
+    repository: lusunn111/KERV
+    description: Public research implementation of kinematic-rectified speculative decoding for embodied VLA models.
 
 placeholder_sections:
-  - id: news
-    label: News
-    icon: fa-solid fa-newspaper
-    note: To be added after verification.
-  - id: honors
-    label: Honors
-    icon: fa-solid fa-award
-    note: To be added after verification.
   - id: funding
     label: Funding
     icon: fa-solid fa-circle-dollar-to-slot
-    note: To be added after verification.
-  - id: publications
-    label: Publications
-    icon: fa-solid fa-book-open
-    note: Publication list will be added after verification.
+    note: To be added after public verification.
   - id: patents
     label: Patents
     icon: fa-solid fa-certificate
-    note: To be added after verification.
-  - id: software
-    label: Software
-    icon: fa-solid fa-code
-    note: To be added after verification.
-  - id: competitions
-    label: Competitions
-    icon: fa-solid fa-trophy
-    note: To be added after verification.
+    note: To be added after public verification.
   - id: favorite-music
     label: My Favorite Music
     icon: fa-solid fa-music

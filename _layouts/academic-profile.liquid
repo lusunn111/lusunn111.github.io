@@ -67,10 +67,15 @@
           <p class="academic-affiliation">{{ academic.profile.affiliation }}</p>
           <p class="academic-location">{{ academic.profile.location }}</p>
         </div>
-        <ul class="academic-profile-links" aria-label="Verified public profiles">
+        <ul class="academic-profile-links" aria-label="Public contact and verified profiles">
           {% for link in academic.profile.links %}
             <li>
-              <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+              <a
+                href="{{ link.url }}"
+                {% unless link.external == false %}
+                  target="_blank" rel="noopener noreferrer"
+                {% endunless %}
+              >
                 <i class="{{ link.icon }}" aria-hidden="true"></i>
                 <span>{{ link.label }}</span>
               </a>
@@ -85,46 +90,250 @@
           {% for paragraph in academic.about %}
             <p>{{ paragraph }}</p>
           {% endfor %}
+          <div class="academic-live-badges" aria-label="Live academic and GitHub metrics">
+            {% for metric in academic.metrics %}
+              <a href="{{ metric.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ metric.label }}">
+                <img src="{{ metric.image }}" alt="{{ metric.label }}" height="20" loading="eager">
+              </a>
+            {% endfor %}
+          </div>
         </section>
 
         <section id="education" class="academic-section">
           <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span>Education</span></h2>
-          {% for item in academic.education %}
-            <ul class="academic-fact-list">
-              <li>
-                <strong>{{ item.institution }}</strong>
-              </li>
-              <li>{{ item.degree }}</li>
-              <li>Advisor: {{ item.advisor }}</li>
-            </ul>
-          {% endfor %}
-        </section>
-
-        <section id="experience" class="academic-section">
-          <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i><span>Experience</span></h2>
-          <div class="academic-experience-list">
-            {% for item in academic.experience %}
-              <article class="academic-experience-item{% if item.placeholder %} academic-placeholder{% endif %}">
-                <p class="academic-experience-period">{{ item.period }}</p>
-                <div class="academic-experience-copy">
+          <div class="academic-education-list">
+            {% for item in academic.education %}
+              <article class="academic-education-item">
+                <div class="academic-institution-logo-wrap">
+                  <img
+                    class="academic-institution-logo {{ item.logo_class }}"
+                    src="{{ item.logo | relative_url }}"
+                    alt="{{ item.institution }} logo"
+                    loading="lazy"
+                  >
+                </div>
+                <p class="academic-record-date">{{ item.period }}</p>
+                <div class="academic-record-copy">
                   <p>
-                    <strong>{{ item.title }}</strong> @ {{ item.organization }}
+                    <strong>
+                      <a href="{{ item.institution_url }}" target="_blank" rel="noopener noreferrer">{{ item.institution }}</a>
+                    </strong>
                   </p>
-                  <p>Advisor: {{ item.advisor }}</p>
+                  <p>{{ item.degree }}</p>
+                  {% if item.advisor %}
+                    <p>
+                      Advisor:
+                      {% if item.advisor_url %}
+                        <a href="{{ item.advisor_url }}" target="_blank" rel="noopener noreferrer">{{ item.advisor }}</a>
+                      {% else %}
+                        {{ item.advisor }}
+                      {% endif %}
+                    </p>
+                  {% endif %}
+                  {% if item.detail %}<p>{{ item.detail }}</p>{% endif %}
                 </div>
               </article>
             {% endfor %}
           </div>
         </section>
 
-        {% for section in academic.placeholder_sections %}
-          <section id="{{ section.id }}" class="academic-section academic-empty-section">
-            <h2>
-              <i class="{{ section.icon }}" aria-hidden="true"></i><span>{{ section.label }}</span>
-            </h2>
-            <p class="academic-placeholder">{{ section.note }}</p>
-          </section>
-        {% endfor %}
+        <section id="experience" class="academic-section">
+          <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i><span>Experience</span></h2>
+          <div class="academic-timeline">
+            {% for item in academic.experience %}
+              <article class="academic-timeline-item">
+                <div class="academic-timeline-date">
+                  <span class="academic-timeline-logo-wrap">
+                    <img
+                      class="academic-timeline-logo {{ item.logo_class }}"
+                      src="{{ item.logo | relative_url }}"
+                      alt=""
+                      loading="lazy"
+                    >
+                  </span>
+                  <span>{{ item.period }}</span>
+                </div>
+                <p class="academic-timeline-title">
+                  {{ item.title }} @
+                  <a href="{{ item.organization_url }}" target="_blank" rel="noopener noreferrer">{{ item.organization }}</a>
+                </p>
+                {% if item.advisor %}
+                  <p class="academic-timeline-advisor">
+                    Advisor:
+                    {% if item.advisor_url %}
+                      <a href="{{ item.advisor_url }}" target="_blank" rel="noopener noreferrer">{{ item.advisor }}</a>
+                    {% else %}
+                      {{ item.advisor }}
+                    {% endif %}
+                  </p>
+                {% endif %}
+                {% if item.description %}<p class="academic-secondary">{{ item.description }}</p>{% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section id="news" class="academic-section">
+          <h2><i class="fa-solid fa-newspaper" aria-hidden="true"></i><span>News</span></h2>
+          <div class="academic-record-list academic-compact-list">
+            {% for item in academic.news %}
+              <article class="academic-record-item">
+                <p class="academic-record-date">{{ item.date }}</p>
+                <div class="academic-record-copy"><p>{{ item.title }}</p></div>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section id="honors" class="academic-section">
+          <h2><i class="fa-solid fa-award" aria-hidden="true"></i><span>Honors</span></h2>
+          <div class="academic-record-list academic-compact-list">
+            {% for item in academic.honors %}
+              <article class="academic-record-item">
+                <p class="academic-record-date">{{ item.date }}</p>
+                <div class="academic-record-copy"><p>{{ item.title }}</p></div>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        {% assign funding = academic.placeholder_sections | where: 'id', 'funding' | first %}
+        <section id="{{ funding.id }}" class="academic-section academic-empty-section">
+          <h2><i class="{{ funding.icon }}" aria-hidden="true"></i><span>{{ funding.label }}</span></h2>
+          <p class="academic-placeholder">{{ funding.note }}</p>
+        </section>
+
+        <section id="publications" class="academic-section academic-publications-section">
+          <div class="academic-section-heading-row">
+            <h2><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Publications</span></h2>
+            <div class="academic-publication-filters" aria-label="Publication visibility">
+              <button type="button" data-publication-filter="representative" aria-pressed="true">Representative</button>
+              <span aria-hidden="true">/</span>
+              <button type="button" data-publication-filter="all" aria-pressed="false">Show All</button>
+            </div>
+          </div>
+
+          {% for group in academic.publication_groups %}
+            <div class="academic-publication-group" data-publication-group>
+              <h3>{{ group.label }}</h3>
+              <div class="academic-publication-list">
+                {% for item in group.entries %}
+                  {% assign primary_link = item.links | first %}
+                  <article
+                    class="academic-publication-item{% if item.image %} academic-publication-featured{% endif %}"
+                    data-publication-item
+                    data-representative="{% if item.representative %}true{% else %}false{% endif %}"
+                  >
+                    {% if item.image %}
+                      <figure class="academic-publication-figure">
+                        <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" loading="eager">
+                        <figcaption>{{ item.year }}</figcaption>
+                      </figure>
+                    {% else %}
+                      <p class="academic-publication-year">{{ item.year }}</p>
+                    {% endif %}
+                    <div class="academic-publication-copy">
+                      <p class="academic-publication-title">
+                        <a href="{{ primary_link.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+                      </p>
+                      <p class="academic-publication-authors">
+                        {% for author in item.authors -%}
+                          {%- if author.self -%}<strong>{{ author.name }}</strong>{%- else -%}{{ author.name }}{%- endif -%}
+                          {%- unless forloop.last -%}, {% endunless -%}
+                        {%- endfor %}
+                      </p>
+                      <p class="academic-publication-venue">{{ item.venue }}</p>
+                      <p class="academic-publication-links">
+                        {% for link in item.links %}
+                          [<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>]
+                        {% endfor %}
+                        [<a
+                          href="{{ academic.profile.links[1].url }}"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-scholar-title="{{ item.title }}"
+                        >Citations</a>]
+                        {% if item.star_repository %}
+                          <a
+                            class="academic-star-badge"
+                            href="https://github.com/{{ item.star_repository }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub stars for {{ item.star_repository }}"
+                          >
+                            <img
+                              src="https://img.shields.io/github/stars/{{ item.star_repository }}?style=social"
+                              alt="GitHub stars"
+                              height="20"
+                              loading="lazy"
+                            >
+                          </a>
+                        {% endif %}
+                      </p>
+                    </div>
+                  </article>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+          <p class="academic-publication-full-list">
+            [<a href="{{ academic.profile.links[1].url }}" target="_blank" rel="noopener noreferrer">Google Scholar full list</a>]
+          </p>
+        </section>
+
+        {% assign patents = academic.placeholder_sections | where: 'id', 'patents' | first %}
+        <section id="{{ patents.id }}" class="academic-section academic-empty-section">
+          <h2><i class="{{ patents.icon }}" aria-hidden="true"></i><span>{{ patents.label }}</span></h2>
+          <p class="academic-placeholder">{{ patents.note }}</p>
+        </section>
+
+        <section id="software" class="academic-section">
+          <h2><i class="fa-solid fa-code" aria-hidden="true"></i><span>Software</span></h2>
+          <div class="academic-software-list">
+            {% for item in academic.software %}
+              <article class="academic-software-item">
+                <div>
+                  <p class="academic-software-name">
+                    <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
+                  </p>
+                  <p class="academic-secondary">{{ item.description }}</p>
+                </div>
+                <a
+                  class="academic-star-badge"
+                  href="https://github.com/{{ item.repository }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub stars for {{ item.repository }}"
+                >
+                  <img
+                    src="https://img.shields.io/github/stars/{{ item.repository }}?style=social"
+                    alt="GitHub stars"
+                    height="20"
+                    loading="lazy"
+                  >
+                </a>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section id="competitions" class="academic-section">
+          <h2><i class="fa-solid fa-trophy" aria-hidden="true"></i><span>Competitions</span></h2>
+          <div class="academic-record-list academic-compact-list">
+            {% for item in academic.competitions %}
+              <article class="academic-record-item">
+                <p class="academic-record-date">{{ item.date }}</p>
+                <div class="academic-record-copy"><p>{{ item.title }}</p></div>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        {% assign music = academic.placeholder_sections | where: 'id', 'favorite-music' | first %}
+        <section id="{{ music.id }}" class="academic-section academic-empty-section">
+          <h2><i class="{{ music.icon }}" aria-hidden="true"></i><span>{{ music.label }}</span></h2>
+          <p class="academic-placeholder">{{ music.note }}</p>
+        </section>
 
         {% if content != empty %}
           <div class="academic-extra-content">{{ content }}</div>
@@ -141,5 +350,6 @@
     </footer>
 
     <script src="{{ '/assets/js/academic-navigation.js' | relative_url | bust_file_cache }}"></script>
+    <script src="{{ '/assets/js/academic-metrics.js' | relative_url | bust_file_cache }}"></script>
   </body>
 </html>
