@@ -37,6 +37,8 @@ navigation:
     target: "#patents"
   - label: Software
     target: "#software"
+  - label: Open Source
+    target: "#open-source"
   - label: Competitions
     target: "#competitions"
   - label: My Favorite Music
@@ -49,6 +51,16 @@ about:
   - >-
     I am an undergraduate in Computer Science and Technology at <a href="https://www.cug.edu.cn/" target="_blank" rel="noopener noreferrer">China University of Geosciences (Wuhan)</a>, and an incoming Ph.D. student in Computer Science at <a href="https://www.pku.edu.cn/" target="_blank" rel="noopener noreferrer">Peking University</a>, starting in Fall 2027. I currently work as a research intern in <a href="https://if-lab-pku.github.io/" target="_blank" rel="noopener noreferrer">IF-Lab</a> under the supervision of <a href="https://if-lab-pku.github.io/" target="_blank" rel="noopener noreferrer">Prof. Xiang Chen</a>.
   - My research focuses on efficient systems for embodied intelligence, particularly efficient inference for vision-language-action and vision-language-navigation models, token caching, speculative decoding, world models, and Physical AI.
+
+academic_services:
+  label: Conference Reviewer
+  entries:
+    - name: AAAI 2027
+      url: https://aaai.org/conference/aaai/aaai-27/
+    - name: IJCNN 2027
+      url: https://ijcnn.org/2027
+    - name: ICCAD 2027
+      url: https://iccad.com/
 
 metrics:
   - label: Google Scholar citations
@@ -126,6 +138,13 @@ honors:
   - date: "2025"
     title: First Prize, National University Physics Experiment Competition
 
+funding:
+  - period: 2024–2025
+    title: BYD Scholarship
+    category: Scholarship Support
+    organization: China University of Geosciences (Wuhan)
+    organization_url: https://foundation.cug.edu.cn/info/1014/6211.htm
+
 publication_groups:
   - label: Published & Accepted
     entries:
@@ -167,6 +186,8 @@ publication_groups:
             url: https://arxiv.org/abs/2603.27705
       - title: A Clustering Aided Multi-Operator Differential Evolution via Cluster-Level Adaptation
         year: "2026"
+        image: /assets/img/publications/camode-paper-page.png
+        image_alt: Title of the CAMODE-CLA paper
         authors:
           - name: Qi Lei
           - name: Zhihao Mao
@@ -182,6 +203,8 @@ publication_groups:
     entries:
       - title: "HeiSD: Hybrid Speculative Decoding for Embodied Vision-Language-Action Models with Kinematic Awareness"
         year: "2026"
+        image: /assets/img/publications/heisd-overview.png
+        image_alt: Overview of the HeiSD hybrid speculative decoding framework
         authors:
           - name: Zihao Zheng
           - name: Zhihao Mao
@@ -224,6 +247,8 @@ publication_groups:
             url: https://arxiv.org/abs/2603.07080
       - title: "FreqCache: Accelerating Embodied VLN Models with Adaptive Frequency-Guided Token Caching"
         year: "2026"
+        image: /assets/img/publications/freqcache-overview.png
+        image_alt: Overview of the FreqCache framework
         authors:
           - name: Zihao Zheng
           - name: Xingyue Zhou
@@ -242,6 +267,8 @@ publication_groups:
             url: https://arxiv.org/abs/2604.24391
       - title: "2D or 3D: Who Governs Salience in VLA Models? -- Tri-Stage Token Pruning Framework with Modality Salience Awareness"
         year: "2026"
+        image: /assets/img/publications/2d3d-overview.png
+        image_alt: Overview of the tri-stage token pruning framework
         authors:
           - name: Zihao Zheng
           - name: Sicheng Tian
@@ -282,11 +309,39 @@ software:
     repository: lusunn111/KERV
     description: Public research implementation of kinematic-rectified speculative decoding for embodied VLA models.
 
+open_source:
+  - name: RoboNix Ecosystem
+    role: Core Contributor
+    url: https://github.com/syswonder/robonix
+    repository: syswonder/robonix
+    description: Core contributor to the embodied AI operating system, with four merged upstream pull requests covering unchanged-scene VLM inference reuse and service publication in the RoboNix package catalog.
+    links:
+      - label: Merged PRs
+        url: https://github.com/pulls?q=is%3Apr+author%3Alusunn111+org%3Asyswonder+is%3Amerged
+      - label: Inference Reuse
+        url: https://github.com/syswonder/robonix/pull/231
+  - name: Experience Memory and Reuse Skill
+    role: RoboNix Skill
+    url: https://github.com/lusunn111/RoboNix-Retrieval-Augmented-Toolkit
+    repository: lusunn111/RoboNix-Retrieval-Augmented-Toolkit
+    description: Experience-memory retrieval and verified action reuse for OpenVLA and π0, with policy fallback for safe online execution.
+  - name: Motion-Aware Action Verification and Recovery Skill
+    role: RoboNix Skill
+    url: https://github.com/lusunn111/RoboNix-Speculative-Decoding-Toolkit
+    repository: lusunn111/RoboNix-Speculative-Decoding-Toolkit
+    description: Motion-aware candidate verification, compensation, and policy recovery for speculative VLA execution.
+  - name: Memory Action Retrieval Service
+    role: RoboNix Service
+    url: https://github.com/lusunn111/service-memory-action-retrieval-rbnx
+    repository: lusunn111/service-memory-action-retrieval-rbnx
+    description: A deployable, provenance-aware service that turns embodied execution history into reusable candidate action trajectories.
+  - name: VLA Action Verification Service
+    role: RoboNix Service
+    url: https://github.com/lusunn111/service-vla-action-verify-rbnx
+    repository: lusunn111/service-vla-action-verify-rbnx
+    description: A deployable action-decision service with speculative decoding, verification, and deterministic fallback.
+
 placeholder_sections:
-  - id: funding
-    label: Funding
-    icon: fa-solid fa-circle-dollar-to-slot
-    note: To be added after public verification.
   - id: patents
     label: Patents
     icon: fa-solid fa-certificate

@@ -40,8 +40,9 @@ The publications comparison checks the most detailed region at the same mobile s
 - Fonts and typography: the Trebuchet/Helvetica/Arial stack matches Diao's compact academic tone; weights and line heights remain readable for long author lists at both tested sizes.
 - Spacing and layout rhythm: desktop identity/content proportions, section rules, timeline spacing, and mobile stacking are consistent and do not overflow.
 - Colors and visual tokens: the implementation keeps Diao's neutral gray/blue base and borrows Jiayu's restrained maroon publication and timeline accents without introducing card-heavy styling.
-- Image quality and asset fidelity: the portrait is an 800 × 800 WebP derived from the user-selected white-background photo; university logos and three representative-paper figures are real local assets with correct aspect ratios and no hotlinking.
+- Image quality and asset fidelity: the portrait is an 800 × 800 WebP derived from the user-selected white-background photo; university logos and all seven publication thumbnails are real local assets with correct aspect ratios and no hotlinking. HeiSD, FreqCache, and 2D or 3D use framework figures downloaded from their arXiv HTML papers; CAMODE-CLA uses a cropped title image from the supplied paper page because no public method figure was available.
 - Copy and content: current undergraduate status, incoming PKU Ph.D. status, IF-Lab internship, publications, and awards are separated accurately. Published/accepted papers and preprints are not conflated.
+- New evidence-backed content: Funding lists the official 2024–2025 BYD Scholarship as scholarship support; About lists the user-confirmed 2027 reviewer service; Open Source lists the user-confirmed RoboNix core-contributor role, four merged upstream pull requests, two RoboNix skills, two services, and live star badges.
 
 ## Comparison history
 
@@ -56,11 +57,13 @@ The publications comparison checks the most detailed region at the same mobile s
 - Mobile overflow navigation: opens, reports `aria-expanded=true`, and closes correctly.
 - Dynamic citation link: KERV resolves to `Citations: 10` and links to its Google Scholar detail entry.
 - Browser console: no errors during the final local check.
+- Publication asset runtime check: 7 of 7 images completed with non-zero natural dimensions.
+- Responsive check: at a 390 × 844 viewport, the document client width is 375 px and scroll width is 375 px; the new Open Source rows wrap without horizontal overflow.
 - Jekyll production build: passed.
 
 ## Follow-up polish
 
 - P3: the visitor badge wraps to a second line at 390 px. This is acceptable and avoids shrinking the academic text or truncating a live metric.
-- P3: Funding, Patents, and Favorite Music remain explicit placeholders until verified content is available. Software now lists the verified public KERV repository with a live star badge.
+- P3: Patents and Favorite Music remain explicit placeholders until verified content is available. Software lists the verified public KERV repository with a live star badge.
 
 final result: passed

@@ -90,6 +90,15 @@
           {% for paragraph in academic.about %}
             <p>{{ paragraph }}</p>
           {% endfor %}
+          {% if academic.academic_services.entries %}
+            <p class="academic-service-line">
+              <strong>{{ academic.academic_services.label }}:</strong>
+              {% for service in academic.academic_services.entries -%}
+                <a href="{{ service.url }}" target="_blank" rel="noopener noreferrer">{{ service.name }}</a>
+                {%- unless forloop.last %}<span aria-hidden="true">, </span>{% endunless -%}
+              {%- endfor %}.
+            </p>
+          {% endif %}
           <div class="academic-live-badges" aria-label="Live academic and GitHub metrics">
             {% for metric in academic.metrics %}
               <a href="{{ metric.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ metric.label }}">
@@ -200,10 +209,24 @@
           </div>
         </section>
 
-        {% assign funding = academic.placeholder_sections | where: 'id', 'funding' | first %}
-        <section id="{{ funding.id }}" class="academic-section academic-empty-section">
-          <h2><i class="{{ funding.icon }}" aria-hidden="true"></i><span>{{ funding.label }}</span></h2>
-          <p class="academic-placeholder">{{ funding.note }}</p>
+        <section id="funding" class="academic-section">
+          <h2><i class="fa-solid fa-circle-dollar-to-slot" aria-hidden="true"></i><span>Funding</span></h2>
+          <div class="academic-record-list academic-compact-list">
+            {% for item in academic.funding %}
+              <article class="academic-record-item">
+                <p class="academic-record-date">{{ item.period }}</p>
+                <div class="academic-record-copy">
+                  <p>
+                    <strong>
+                      <a href="{{ item.organization_url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+                    </strong>
+                    <span class="academic-funding-category"> · {{ item.category }}</span>
+                  </p>
+                  <p class="academic-secondary">{{ item.organization }}</p>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
         </section>
 
         <section id="publications" class="academic-section academic-publications-section">
@@ -300,6 +323,44 @@
                     <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
                   </p>
                   <p class="academic-secondary">{{ item.description }}</p>
+                </div>
+                <a
+                  class="academic-star-badge"
+                  href="https://github.com/{{ item.repository }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub stars for {{ item.repository }}"
+                >
+                  <img
+                    src="https://img.shields.io/github/stars/{{ item.repository }}?style=social"
+                    alt="GitHub stars"
+                    height="20"
+                    loading="lazy"
+                  >
+                </a>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section id="open-source" class="academic-section">
+          <h2><i class="fa-brands fa-github" aria-hidden="true"></i><span>Open Source</span></h2>
+          <div class="academic-open-source-list">
+            {% for item in academic.open_source %}
+              <article class="academic-open-source-item">
+                <div class="academic-open-source-copy">
+                  <p class="academic-open-source-heading">
+                    <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
+                    <span>{{ item.role }}</span>
+                  </p>
+                  <p class="academic-secondary">{{ item.description }}</p>
+                  {% if item.links %}
+                    <p class="academic-open-source-links">
+                      {% for link in item.links %}
+                        [<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>]
+                      {% endfor %}
+                    </p>
+                  {% endif %}
                 </div>
                 <a
                   class="academic-star-badge"
