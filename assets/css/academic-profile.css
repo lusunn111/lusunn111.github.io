@@ -844,20 +844,6 @@ body.academic-profile-page {
   text-align: right;
 }
 
-.academic-music-quote {
-  margin: 2px 0 19px;
-  padding: 3px 0 3px 14px;
-  color: var(--academic-muted);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 14px;
-  line-height: 1.5;
-  border-left: 3px solid #9b3022;
-}
-
-.academic-music-quote cite {
-  font-style: normal;
-}
-
 .academic-music-gallery {
   display: grid;
   gap: 18px;
