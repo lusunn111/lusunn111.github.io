@@ -15,6 +15,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - name: Check out the homepage source
         uses: actions/checkout@v4
@@ -27,14 +28,21 @@ jobs:
           cache-dependency-path: scripts/scholar-requirements.txt
 
       - name: Fetch the public Scholar profile
+        id: fetch-scholar
         env:
           GOOGLE_SCHOLAR_ID: lQmlVzoAAAAJ
           SCHOLAR_OUTPUT_DIR: scholar-stats
         run: |
           python -m pip install --requirement scripts/scholar-requirements.txt
-          python scripts/update_scholar_stats.py
+          if timeout 8m python scripts/update_scholar_stats.py; then
+            echo "updated=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Google Scholar did not respond; preserving the last successful statistics branch."
+            echo "updated=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Publish the generated JSON branch
+        if: steps.fetch-scholar.outputs.updated == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
