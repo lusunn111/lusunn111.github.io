@@ -1,0 +1,140 @@
+{
+  "container_type": "Author",
+  "filled": [
+    "basics",
+    "publications",
+    "indices",
+    "counts"
+  ],
+  "scholar_id": "lQmlVzoAAAAJ",
+  "source": "AUTHOR_PROFILE_PAGE",
+  "name": "Zhihao Mao",
+  "url_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=lQmlVzoAAAAJ&citpid=1",
+  "affiliation": "China University of Geosciences",
+  "organization": 1916015625641421023,
+  "interests": [
+    "ML",
+    "VLA",
+    "VLN"
+  ],
+  "email_domain": "@cug.edu.cn",
+  "citedby": 24,
+  "publications": {
+    "lQmlVzoAAAAJ:u-x6o8ySG0sC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Kerv: Kinematic-rectified speculative decoding for embodied vla models",
+        "pub_year": "2026",
+        "citation": "arXiv preprint arXiv:2603.01581, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "lQmlVzoAAAAJ:u-x6o8ySG0sC",
+      "num_citations": 11,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11097204351609810013",
+      "cites_id": [
+        "11097204351609810013"
+      ]
+    },
+    "lQmlVzoAAAAJ:d1gkVwhDpl0C": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Heisd: Hybrid speculative decoding for embodied vision-language-action models with kinematic awareness",
+        "pub_year": "2026",
+        "citation": "arXiv preprint arXiv:2603.17573, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "lQmlVzoAAAAJ:d1gkVwhDpl0C",
+      "num_citations": 8,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4741662964079717515",
+      "cites_id": [
+        "4741662964079717515"
+      ]
+    },
+    "lQmlVzoAAAAJ:u5HHmVD_uO8C": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "VLN-Cache: Enabling Token Caching for VLN Models with Visual/Semantic Dynamics Awareness",
+        "pub_year": "2026",
+        "citation": "arXiv preprint arXiv:2603.07080, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "lQmlVzoAAAAJ:u5HHmVD_uO8C",
+      "num_citations": 3,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5109936818016171771",
+      "cites_id": [
+        "5109936818016171771"
+      ]
+    },
+    "lQmlVzoAAAAJ:qjMakFHDy7sC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "FreqCache: Accelerating Embodied VLN Models with Adaptive Frequency-Guided Token Caching",
+        "pub_year": "2026",
+        "citation": "arXiv preprint arXiv:2604.24391, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "lQmlVzoAAAAJ:qjMakFHDy7sC",
+      "num_citations": 1,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=765505925314724011",
+      "cites_id": [
+        "765505925314724011"
+      ]
+    },
+    "lQmlVzoAAAAJ:2osOgNQ5qMEC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "2D or 3D: Who Governs Salience in VLA Models?--Tri-Stage Token Pruning Framework with Modality Salience Awareness",
+        "pub_year": "2026",
+        "citation": "arXiv preprint arXiv:2604.09244, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "lQmlVzoAAAAJ:2osOgNQ5qMEC",
+      "num_citations": 1,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1348617566970096517",
+      "cites_id": [
+        "1348617566970096517"
+      ]
+    },
+    "lQmlVzoAAAAJ:zYLM7Y9cAGgC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "A Clustering Aided Multi-Operator Differential Evolution via Cluster-Level Adaptation",
+        "pub_year": "2026",
+        "citation": "Proceedings of the Genetic and Evolutionary Computation Conference Companion …, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "lQmlVzoAAAAJ:zYLM7Y9cAGgC",
+      "num_citations": 0
+    },
+    "lQmlVzoAAAAJ:9yKSN-GCB0IC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "RAP: Retrieve, Adapt, and Prompt-Fit for Training-Free Few-Shot Medical Image Segmentation",
+        "pub_year": "2026",
+        "citation": "arXiv preprint arXiv:2603.27705, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "lQmlVzoAAAAJ:9yKSN-GCB0IC",
+      "num_citations": 0
+    }
+  },
+  "citedby5y": 24,
+  "hindex": 3,
+  "hindex5y": 3,
+  "i10index": 1,
+  "i10index5y": 1,
+  "cites_per_year": {
+    "2023": 1,
+    "2024": 0,
+    "2025": 0,
+    "2026": 23
+  },
+  "updated": "2026-09-03T12:44:38.192527+00:00"
+}
